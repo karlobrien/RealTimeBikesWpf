@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="RealTimeBikesWpf.BikeGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:componentModel="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             mc:Ignorable="d" d:DesignWidth="600" Height="316">
+    <Grid Margin="0,0,-129,0">
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding Station}" >
+            <DataGrid.Columns>
+                <DataGridTextColumn CanUserSort="True" SortMemberPath="Name" Header="Name" Binding="{Binding Name}" Width="140" />
+                <DataGridTextColumn CanUserSort="True" SortMemberPath="Address" Header="Address" Binding="{Binding Address}" Width="120" />
+                <DataGridTextColumn CanUserSort="True" SortMemberPath="Bike_Stands" Header="Bike Stands" Binding="{Binding Bike_Stands}" Width="80" />
+                <DataGridTextColumn CanUserSort="True" SortMemberPath="Available_Bike_Stands" Header="Available Bike Stands" Binding="{Binding Available_Bike_Stands}" Width="130" />
+                <DataGridTextColumn CanUserSort="True" SortMemberPath="Available_Bikes" Header="Available Bikes" Binding="{Binding Available_Bikes}" Width="120" />
+                <DataGridCheckBoxColumn  CanUserSort="True" SortMemberPath="Banking" Header="Banking" Binding="{Binding Banking}" Width="120" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Start" VerticalAlignment="Bottom" Command="{Binding btnStart}"/>
+
+    </Grid>
+</UserControl>

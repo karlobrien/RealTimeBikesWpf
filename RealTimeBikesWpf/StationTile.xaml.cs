@@ -12,22 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MahApps.Metro.Controls;
-using RealTimeBikesWpf.ViewModel;
-
 
 namespace RealTimeBikesWpf
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for StationTile.xaml
     /// </summary>
-    public partial class MainWindow : MetroWindow
+    public partial class StationTile : UserControl
     {
-        public MainWindow()
+        public StationTile()
         {
             InitializeComponent();
-            DataContext = new MainWindowViewModel();
         }
-
     }
 }
